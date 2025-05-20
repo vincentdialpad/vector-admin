@@ -147,7 +147,7 @@ class Chroma {
 
   async rawGet(collectionId, pageSize = 10, offset = 0) {
     return await fetch(
-      `${this.config.settings.instanceURL}/api/v1/collections/${collectionId}/get`,
+      `${this.config.settings.instanceURL}/api/v2/tenants/default_tenant/databases/default_database/collections/${collectionId}/get`,
       {
         method: "POST",
         headers: {
